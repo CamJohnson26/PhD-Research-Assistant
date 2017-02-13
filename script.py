@@ -16,7 +16,7 @@ def createPDFS(mypath):
 		im = Image.open(image)
 		w, h = im.size
 		if w > h:
-			img2 = im.rotate(90)
+			img2 = im.rotate(90, expand=True)
 			img2.save(image)
 		pdf.add_page()
 		pdf.image(image,0,0,200)
